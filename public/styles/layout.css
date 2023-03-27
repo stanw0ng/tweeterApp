@@ -21,8 +21,10 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.logo {
-  font-family: 'Bungee', cursive;
+main {
+  width: 90%;
+  background-color: #f4f1ec;
+  margin: 0 auto;
 }
 
 /*
