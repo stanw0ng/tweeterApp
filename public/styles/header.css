@@ -1,3 +1,14 @@
 header {
-  
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 520px;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: darkgoldenrod;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+}
+
+header img {
+  width: 200px;
 }
