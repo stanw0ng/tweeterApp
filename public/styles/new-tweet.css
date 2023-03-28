@@ -15,6 +15,12 @@ form button {
   font-family: 'Bungee', cursive;
 }
 
+article {
+  margin-top: 2em;
+  border: solid 4px #545149; 
+  padding: 1em;
+}
+
 #tweet-text {
   display: flex;
   background:transparent;
@@ -24,8 +30,7 @@ form button {
   width:100%;
   color: #545149;
   border-bottom: 4px solid #545149;
-  padding: .5em 0;
-  font-size: .75em;
+  padding-bottom: .5em;
   font-weight: 600;
 }
 
@@ -42,4 +47,70 @@ position: absolute;
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.article {
+  margin-bottom: 1em;
+}
+
+
+.tweet-header {
+  height: 1em;
+  background-image: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;  
+}
+
+.tweet-content {
+  display: flex;
+  padding-bottom: .5em;
+  border-bottom: 4px solid #545149;
+  font-weight: 600;
+  margin: 1em 0 .5em 0;
+}
+
+.handle {
+  font-weight: 600;
+}
+
+.tweet-footer {
+  height: .5em;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;
+  font-size: .5em;
+}
+
+.engage-icons {
+  display: flex;
+  width: 7.5%;
+  justify-content: space-between;
+  color: #4056A1;
+}
+
+.fa-solid.fa-flag:hover {
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+
+.fa-solid.fa-retweet:hover {
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+
+.fa-solid.fa-heart:hover {
+  color: darkgoldenrod;
+  cursor: pointer;
+}
+
+.article:hover {
+  box-shadow: 8px 8px #c9cae2;
+}
+
+.article:hover .handle {
+  color: #c9cae2;
+  box-shadow: none;
 }
