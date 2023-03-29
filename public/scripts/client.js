@@ -1,35 +1,35 @@
-$(document).ready(function() {
-
-  // DATABASE
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
+// DATABASE
+const data = [
+  {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
+      "handle": "@SirIsaac"
     },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
+    "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+    "created_at": 1461116232227
+  },
+  {
+    "user": {
+      "name": "Descartes",
+      "avatars": "https://i.imgur.com/nlhLi3I.png",
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088
+  }
+];
+
+$(document).ready(function() {
 
   // creates tweet element by taking in data and formats it to a template
   const createTweetElement = (tweet) => {
     
-    const userTweet = 
+    const userTweet =
     
     `<article class="article">
     <header class="tweet-header">
@@ -51,16 +51,28 @@ $(document).ready(function() {
     </article>`;
     
     return userTweet;
-  }
+  };
   
   // renders each tweet
   const renderTweets = function(tweets) {
-    for (user in tweets) {
-      const $tweet = createTweetElement(tweets[user]);
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
       $('#tweets-container').append($tweet);
     }
-  }
+  };
+
+  // listens for new tweet submit and POSTs to server
+  $('#new-tweet-form').on('submit', function(event) {
+    event.preventDefault(); // prevents refresh
+    const formData = $(this).serialize(); // serialize
+    $.post('/tweets', formData) // send the data to the server
+      .then(function() {
+        console.log('Tweet data received!');
+      })
+      .catch(function(error) {
+        console.log('Error:', error);
+      });
+  });
 
   renderTweets(data);
-
 });
