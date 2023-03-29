@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  const escape = function(str) {
+    const div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // creates tweet element by taking in data and formats it to a template
   const createTweetElement = (tweet) => {
     
@@ -13,7 +19,7 @@ $(document).ready(function() {
     </div>
     <span class="handle">${tweet.user.handle}</span>
     </header>
-    <p class="tweet-content">${tweet.content.text}</p>
+    <p class="tweet-content">${escape(tweet.content.text)}</p>
     <footer class="tweet-footer">
     <span class="timestamp">${timeago.format(tweet.created_at)}</span>
     <span class="engage-icons">
@@ -28,8 +34,11 @@ $(document).ready(function() {
   };
   
   // renders each tweet
-  const renderTweets = function(tweets) {
-    for (const tweet of tweets) {
+  const renderTweets = function(tweetsDb) {
+
+    const freshTweets = tweetsDb.reverse(); // newest tweets first
+
+    for (const tweet of freshTweets) {
       const $tweet = createTweetElement(tweet);
       $('#tweets-container').append($tweet);
     }
