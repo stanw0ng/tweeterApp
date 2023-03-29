@@ -7,10 +7,10 @@ $(document).ready(function() {
     const charCount = originalCharCount - tweetLength;
     $counter.text(charCount);
     
-    if(charCount < 0) {
-      $counter.css('color', '#FF0000')
+    if (charCount < 0) {
+      $counter.css('color', '#FF0000');
     } else {
-      $counter.css('color', '#545149')
+      $counter.css('color', '#545149');
     }
   });
 });

@@ -46,7 +46,7 @@ $(document).ready(function() {
   };
 
   // listens for new tweet submit and POSTs to server
-  $('#new-tweet-form').submit( function(event) {
+  $('#new-tweet-form').submit(function(event) {
     event.preventDefault(); // prevents refresh
     const formData = $(this).serialize(); // serialize
 
@@ -59,7 +59,7 @@ $(document).ready(function() {
     if (tweetText.length > 140) {
       $('#tweet-err').text("You've exceed the character limit!").slideDown(400);
       return;
-    } 
+    }
     
     if (!tweetText.length) {
       $('#tweet-err').text("Your Tweet box is empty!").slideDown(400);
@@ -71,8 +71,7 @@ $(document).ready(function() {
       method: 'POST',
       data: formData,
       datatype: 'JSON',
-      success: function(data) {
-        console.log("Tweet data received!");
+      success: function() {
         loadTweets();
         $('#tweet-text').val(""); //clears form
         $('.counter').text(140); //resets counter
@@ -80,21 +79,21 @@ $(document).ready(function() {
       error: function(error) {
         console.log("Error:", error);
       }
-    })
+    });
   });
 
   // loads tweets
-  const loadTweets = function  () {
-    $.getJSON ({
+  const loadTweets = function() {
+    $.getJSON({
       url: "/tweets",
-      success: function (data) {
+      success: function(data) {
         $('#tweets-container').empty();
         renderTweets(data);
       },
       error: function(error) {
         console.log("Error:", error);
       }
-    })
+    });
   };
 
   loadTweets();
