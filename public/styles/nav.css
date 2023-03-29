@@ -13,10 +13,15 @@ nav {
 
 .logo {
   font-family: 'Bungee', cursive;
+  font-size: 2em;
 }
 
 nav div {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+i.fa-angles-down {
+  color: #FF0000
 }
