@@ -15,7 +15,7 @@ $(document).ready(function() {
     </header>
     <p class="tweet-content">${tweet.content.text}</p>
     <footer class="tweet-footer">
-    <span class="timestamp">${tweet.created_at}</span>
+    <span class="timestamp">${timeago.format(tweet.created_at)}</span>
     <span class="engage-icons">
     <i class="fa-solid fa-flag"></i>
     <i class="fa-solid fa-retweet"></i>
@@ -53,21 +53,20 @@ $(document).ready(function() {
       },
       error: function(error) {
         console.log("Error:", error);
-        return;
       }
     })
   });
 
   // loads tweets
-  const loadTweets = function() {
+  const loadTweets = function  () {
     $.getJSON ({
       url: "/tweets",
-      success: function(data) {
+      success: function (data) {
+        $('#tweets-container').empty();
         renderTweets(data);
       }
     })
   };
 
   loadTweets();
-
 });
