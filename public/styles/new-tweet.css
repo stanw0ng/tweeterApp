@@ -84,6 +84,15 @@ position: absolute;
   width: 15%;
 }
 
+#tweet-err {
+  display: none;
+  color: #FF0000;
+  font-weight: 600;
+  border: 4px solid;
+  padding: 1em;
+  margin: 1em 0;
+}
+
 .tweet-content {
   display: flex;
   padding-bottom: .5em;
