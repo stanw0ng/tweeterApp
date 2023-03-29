@@ -15,6 +15,11 @@ form button {
   font-family: 'Bungee', cursive;
 }
 
+.tweets-container {
+  display: flex;
+  flex-direction: column;
+}
+
 article {
   margin-top: 2em;
   border: solid 4px #545149; 
@@ -61,6 +66,18 @@ position: absolute;
   display: flex;
   flex-direction: row;  
   justify-content: space-between;  
+}
+
+.user-logo {
+  display: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: 5em;
+}
+
+.avatar {
+  display: inherit;
+  width: 25%;
 }
 
 .tweet-content {
