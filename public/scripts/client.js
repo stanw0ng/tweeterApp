@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+  // sanitize input text from XSS vulnerabilities
   const escape = function(str) {
     const div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -51,13 +52,17 @@ $(document).ready(function() {
 
     const tweetText = $('#tweet-text').val();
     
+    if (tweetText.length) {
+      $('#tweet-err').slideUp(400).text();
+    }
+    
     if (tweetText.length > 140) {
-      alert("You have exceeded the characer limit!")
+      $('#tweet-err').text("You've exceed the character limit!").slideDown(400);
       return;
-    }  
-
+    } 
+    
     if (!tweetText.length) {
-      alert("There was nothing to tweet!")
+      $('#tweet-err').text("Your Tweet box is empty!").slideDown(400);
       return;
     }
 
