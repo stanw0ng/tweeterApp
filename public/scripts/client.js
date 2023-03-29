@@ -42,14 +42,13 @@ $(document).ready(function() {
 
     const tweetText = $('#tweet-text').val();
     
-    // if the length of the user tweet is greater 140 characters returns error message
     if (tweetText.length > 140) {
-      alert("You've exceed the characer limit!")
+      alert("You have exceeded the characer limit!")
       return;
     }  
-    //if tweetText returns falsey return error message
+
     if (!tweetText.length) {
-      alert("Your Tweet box is empty!")
+      alert("There was nothing to tweet!")
       return;
     }
 
@@ -77,6 +76,9 @@ $(document).ready(function() {
       success: function (data) {
         $('#tweets-container').empty();
         renderTweets(data);
+      },
+      error: function(error) {
+        console.log("Error:", error);
       }
     })
   };
