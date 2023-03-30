@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  // slide toggle
+  $('.new-tweet-toggle').click(function() {
+    $('.new-tweet').slideToggle(400);
+  });
+
   // sanitize input text from XSS vulnerabilities
   const escape = function(str) {
     const div = document.createElement('div');
