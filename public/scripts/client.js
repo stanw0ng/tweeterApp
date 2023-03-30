@@ -1,5 +1,19 @@
 $(document).ready(function() {
 
+  //top button
+  $("#top-button").hide();
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 400) {
+      $("#top-button").fadeIn();
+    } else {
+      $("#top-button").fadeOut();
+    }
+  });
+
+  $("#top-button").click(function() {
+    $("html, body").animate({scrollTop: 0}, "slow");
+  });
+
   // slide toggle
   $('.new-tweet-toggle').click(function() {
     $('.new-tweet').slideToggle(400);

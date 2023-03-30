@@ -37,6 +37,24 @@ nav div {
   }
 }
 
-.new-tweet-toggle:hover {
+.new-tweet-toggle {
   cursor: pointer ;
+}
+
+#top-button {
+  padding: 2em;
+  display: flex;
+  position: fixed;
+  bottom: 3%;
+  right: 1%;
+  border-radius: 50%;
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  justify-content: center;
+  align-items: center;
 }
