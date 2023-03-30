@@ -37,3 +37,6 @@ nav div {
   }
 }
 
+.new-tweet-toggle:hover {
+  cursor: pointer ;
+}
