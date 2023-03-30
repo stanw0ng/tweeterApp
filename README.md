@@ -28,6 +28,6 @@ This repository is the starter code for the project: Students will fork and clon
 - Top button to return to the top of the page
 
 ## ScreenShots 
-![Landing page]()
-![Landing page with more tweets]()
-![Screenshot of mobile sized layout]()
+![Desktop Landing page]()
+![Desktop Landing page with more tweets]()
+![Mobile Layout - Top]() | ![Mobile Layout - Scrolling Down]()
