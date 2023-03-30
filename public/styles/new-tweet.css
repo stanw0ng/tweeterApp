@@ -26,16 +26,16 @@ form button {
 
 article {
   margin-top: 2em;
-  border: solid 4px #545149; 
+  border: solid 4px #545149;
   padding: 1em;
 }
 
 #tweet-text {
   display: flex;
-  background:transparent;
+  background: transparent;
   resize: none;
-  outline:none;
-  border:none;
+  outline: none;
+  border: none;
   width: 100%;
   color: #545149;
   border-bottom: 4px solid;
@@ -47,8 +47,8 @@ article {
   font-weight: 600;
 }
 
-.reader-only{
-position: absolute;
+.reader-only {
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -68,7 +68,7 @@ position: absolute;
   background-color: transparent;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 .user-logo {
@@ -113,7 +113,7 @@ position: absolute;
   height: .5em;
   background-color: transparent;
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
   justify-content: space-between;
   font-size: .75em;
 }

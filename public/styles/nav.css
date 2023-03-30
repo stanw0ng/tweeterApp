@@ -35,13 +35,14 @@ nav div {
   from {
     top: 0;
   }
+
   to {
     top: .5em;
   }
 }
 
 .new-tweet-toggle {
-  cursor: pointer ;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 480px) {

@@ -1,94 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- Bungee (logo and tweet button) + Source Sans (body) Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- Font Awesome Symbols -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bungee (logo and tweet button) + Source Sans (body) Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+    rel="stylesheet">
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <!-- Font Awesome Symbols -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  </head>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class="logo">tweeter</span>
-      <div class = 'new-tweet-toggle'>
-        <span><b>Write</b> a new tweet</span>
-        <i class="fa-solid fa-angles-down"></i>
-      </div>
-    </nav>
+</head>
 
-    <!-- Header with Avatar -->
-    <header class="header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2 class="current-handle">Tweeter Enjoyer</h2>
-      </div>
-    </header>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span class="logo">tweeter</span>
+    <div class='new-tweet-toggle'>
+      <span><b>Write</b> a new tweet</span>
+      <i class="fa-solid fa-angles-down"></i>
+    </div>
+  </nav>
 
-    <button id="top-button" style="display:none;"><i class="fa-solid fa-angles-up"></i></button>
-    <!-- Page-specific (main) content here -->
-    <main id="container">
-      <section class="new-tweet">
-        <h2 class="new-tweet-header">Compose Tweet</h2>
-        <div id="tweet-err"></div>
-        <form id="new-tweet-form" method="POST" action="/tweets">
-          <label for="tweet-text" class="reader-only">Enter text below:</label>
-          <textarea name="text" id="tweet-text" placeholder="(Input Text Here)"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+  <!-- Header with Avatar -->
+  <header class="header">
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2 class="current-handle">Tweeter Enjoyer</h2>
+    </div>
+  </header>
+
+  <button id="top-button" style="display:none;"><i class="fa-solid fa-angles-up"></i></button>
+  <!-- Page-specific (main) content here -->
+  <main id="container">
+    <section class="new-tweet">
+      <h2 class="new-tweet-header">Compose Tweet</h2>
+      <div id="tweet-err"></div>
+      <form id="new-tweet-form" method="POST" action="/tweets">
+        <label for="tweet-text" class="reader-only">Enter text below:</label>
+        <textarea name="text" id="tweet-text" placeholder="(Input Text Here)"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
+    <section id="tweets-container">
+      <article class="article">
+        <header class="tweet-header">
+          <div class="user-logo">
+            <img class="avatar" src="#">
+            <span class="display-name">Display Name</span>
           </div>
-        </form>
-      </section>
-      <section id="tweets-container">
-        <article class="article">
-          <header class="tweet-header">
-            <div class="user-logo">
-              <img class="avatar" src="#">
-              <span class="display-name">Display Name</span>
-            </div>
-            <span class="handle">@userHandle</span>
-          </header>
-          <p class="tweet-content">
-            Say hello to the future of social media! AI-generated tweets are taking over and changing the game. Exciting times ahead.
-          </p>
-          <footer class="tweet-footer">
-            <span class="timestamp">Date Posted</span>
-            <span class="engage-icons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </span>
-          </footer>
-        </article>
-      </section>
-    </main>
-  </body>
+          <span class="handle">@userHandle</span>
+        </header>
+        <p class="tweet-content">
+          Say hello to the future of social media! AI-generated tweets are taking over and changing the game. Exciting
+          times ahead.
+        </p>
+        <footer class="tweet-footer">
+          <span class="timestamp">Date Posted</span>
+          <span class="engage-icons">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </span>
+        </footer>
+      </article>
+    </section>
+  </main>
+</body>
+
 </html>

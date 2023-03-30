@@ -11,7 +11,7 @@ $(document).ready(function() {
   });
 
   $("#top-button").click(function() {
-    $("html, body").animate({scrollTop: 0}, "slow");
+    $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
   // slide toggle feature for "write a new tweet button"
@@ -28,10 +28,10 @@ $(document).ready(function() {
 
   // creates tweet element by taking in data and formats it to a template
   const createTweetElement = (tweet) => {
-    
+
     const userTweet =
-    
-    `<article class="article">
+
+      `<article class="article">
     <header class="tweet-header">
     <div class="user-logo">
     <img class="avatar" src="${tweet.user.avatars}">
@@ -49,10 +49,10 @@ $(document).ready(function() {
     </span>
     </footer>
     </article>`;
-    
+
     return userTweet;
   };
-  
+
   // renders each tweet
   const renderTweets = function(tweetsDb) {
 
@@ -70,16 +70,16 @@ $(document).ready(function() {
     const formData = $(this).serialize(); // serialize
 
     const tweetText = $('#tweet-text').val();
-    
+
     if (tweetText.length) {
       $('#tweet-err').slideUp(400).text();
     }
-    
+
     if (tweetText.length > 140) {
       $('#tweet-err').text("You've exceed the character limit!").slideDown(400);
       return;
     }
-    
+
     if (!tweetText.length) {
       $('#tweet-err').text("Your Tweet box is empty!").slideDown(400);
       return;

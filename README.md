@@ -11,8 +11,23 @@ This repository is the starter code for the project: Students will fork and clon
 3. Install dependencies using the `npm install` command.
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
+5. Tweet all your thoughts whenever you want!
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- Chance
+- MD5
+- timeago.js
+
+## Bonus Features
+
+- Slide toggle feature when clicking "Write a new tweet" which can hide new tweet form.
+- Top button to return to the top of the page
+
+## ScreenShots 
+![Landing page]()
+![Landing page with more tweets]()
+![Screenshot of mobile sized layout]()
