@@ -22,6 +22,21 @@ nav div {
   align-items: center;
 }
 
-i.fa-angles-down {
-  color: #FF0000
+.fa-angles-down {
+  color: #FF0000;
+  position: relative;
+  animation: moveUpDown 1s ease-in-out infinite alternate;
+}
+
+@keyframes moveUpDown {
+  from {
+    top: 0;
+  }
+  to {
+    top: .5em;
+  }
+}
+
+.new-tweet-toggle:hover {
+  cursor: pointer ;
 }
