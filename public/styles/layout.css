@@ -15,18 +15,67 @@ html {
  */
 
 body {
+  display: flex;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  margin-top: 7em;
 }
 
 main {
-  width: 90%;
+  width: 100%;
   background-color: #f4f1ec;
-  margin: 0 auto;
+  margin: 0 2em;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+#top-button {
+  display: flex;
+  position: fixed;
+  bottom: 5%;
+  right: 1%;
+  border-radius: 50%;
+  background-color: #FF0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 3em;
+  height: 3em;
+  line-height: 50px;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.current-handle {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  main {
+    width: 90%;
+    background-color: #f4f1ec;
+    margin: 
+    0 auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #top-button {
+    bottom: 1%;
+    right: 50%;
+    border-radius: 25% / 50%;
+    width: 10%;
+    height: 2.5%;
+    transform: translateX(50%);
+  }
+}

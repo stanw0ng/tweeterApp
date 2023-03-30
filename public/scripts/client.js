@@ -14,7 +14,7 @@ $(document).ready(function() {
     $("html, body").animate({scrollTop: 0}, "slow");
   });
 
-  // slide toggle
+  // slide toggle feature for "write a new tweet button"
   $('.new-tweet-toggle').click(function() {
     $('.new-tweet').slideToggle(400);
   });

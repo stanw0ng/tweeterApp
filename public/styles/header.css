@@ -1,14 +1,32 @@
-header {
+.header {
+  position: sticky;
+  top: 7em;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 520px;
+  width: 40%;
+  height: 20em;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: darkgoldenrod;
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  margin: 0 2em;
+  z-index: -1;
 }
 
-header img {
+.header img {
   width: 175px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    position: relative;
+    top: 0;
+    margin: 120px 0 0 0;
+    width: 100%;
+    height: 15em;
+  }
+
+  .header img {
+    width: 150px;
+  }
 }

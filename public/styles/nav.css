@@ -1,6 +1,7 @@
 nav {
   display: flex;
   position: fixed;
+  top: 0;
   width: 100%;
   height: 120px;
   background-color: #4056A1;
@@ -9,6 +10,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   white-space: nowrap;
+  flex-wrap: wrap;
+  z-index: 99;
 }
 
 .logo {
@@ -41,20 +44,9 @@ nav div {
   cursor: pointer ;
 }
 
-#top-button {
-  padding: 2em;
-  display: flex;
-  position: fixed;
-  bottom: 3%;
-  right: 1%;
-  border-radius: 50%;
-  background-color: #FF0000;
-  color: white;
-  border: none;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  justify-content: center;
-  align-items: center;
+@media only screen and (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }

@@ -42,13 +42,13 @@
     </nav>
 
     <!-- Header with Avatar -->
-    <header>
+    <header class="header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Your Name</h2>
+          <h2 class="current-handle">Tweeter Enjoyer</h2>
       </div>
     </header>
 
@@ -56,7 +56,7 @@
     <!-- Page-specific (main) content here -->
     <main id="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2 class="new-tweet-header">Compose Tweet</h2>
         <div id="tweet-err"></div>
         <form id="new-tweet-form" method="POST" action="/tweets">
           <label for="tweet-text" class="reader-only">Enter text below:</label>
