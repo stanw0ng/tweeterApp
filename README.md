@@ -30,4 +30,4 @@ This repository is the starter code for the project: Students will fork and clon
 ## ScreenShots 
 ![Desktop Landing page](docs/Tweeter_Landing_Desktop_A.png)
 ![Desktop Landing page with more tweets](docs/Tweeter_Landing_Desktop_B.png)
-![Mobile Layout - Top](docs/Tweeter_Mobile_A.png) | ![Mobile Layout - Scrolling Down](docs/Tweeter_Mobile_B.png)
+![Mobile Layout - Top](docs/Tweeter_Mobile_A_reduced.png) | ![Mobile Layout - Scrolling Down](docs/Tweeter_Mobile_B_reduced.png)
